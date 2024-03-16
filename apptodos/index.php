@@ -29,19 +29,14 @@ if (isset($_POST['todo'])) {
     <button type="submit">Simpan</button>
 </form>
 <ul>
+
+    <?php foreach($todos as $key => $value) { ?>
+
     <li>
         <input type="checkbox" name="todo">
-        <label">Todo 1</label>
+        <label"><?= $value['todo'] ?></label>
         <a href="#">hapus</a>
     </li>
-    <li>
-        <input type="checkbox" name="todo">
-        <label>Todo 1</label>
-        <a href="#">hapus</a>
-    </li>
-    <li>
-        <input type="checkbox" name="todo">
-        <label>Todo 1</label>
-        <a href="#">hapus</a>
-    </li>
+
+    <?php }?>
 </ul>
